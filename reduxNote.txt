@@ -1,0 +1,58 @@
+https://app.eraser.io/workspace/AigM8Pe26oGPgaJJAXnj
+
+Create Store
+import {configureStore} from '@reduxjs/toolkit'
+
+export const myStore = configureStore({})
+
+
+
+
+1. Now, Create different types of features like login feature, Signup feature, Product feature and etc
+2. Second Import thing is Initial State, So Create Initial State. 
+-Why we define Initial State.
+---> Initial State define the structure of store, - how the store will look in the beginning. Weather it will be an empty, have some default values, receive data from database, be an array of an object.
+
+import { createSlice } from "@reduxjs/toolkit"
+
+
+const initialState = {
+    todosArray: [
+        {
+            id: 1,
+            data: 'Hello User'
+        }
+    ]
+}
+
+
+const todoSlice = createSlice({
+    name: 'my-todo',
+    initialState,
+    reducers: {
+        addTodoItem: (state, action) => {
+            const obj = {
+                id: Date.now(),
+                data: "Apple"   //action.payload
+            }
+            state.todosArray.push(obj)
+        },
+        removeItem: (state, action) => {
+            state.todosArray = state.todosArray.filter((obj) => obj.id !== action.payload)
+        },
+        updateTodoItem: (state, action) => {}
+    }
+})
+
+export const {addTodoItem, removeItem, updateTodoItem} = todoSlice.action
+
+export default  todoSlice.reducers
+
+================================================
+Now use this export slice in our store
+
+import TodoReducer from './feature/TodoSlice.js'
+
+export const store = configureStore({
+    reducer: TodoReducer
+})
