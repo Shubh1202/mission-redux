@@ -76,3 +76,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## `npm install @reduxjs/toolkit`
 
+
+
+![screen-shot](https://github.com/user-attachments/assets/1edcb4d0-5611-4a1c-a53b-37dbd870c991)
+
