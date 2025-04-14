@@ -1,6 +1,6 @@
 ## This is the theroy
 
-This is the theory URL [](https://app.eraser.io/workspace/AigM8Pe26oGPgaJJAXnj)
+This is the theory URL https://app.eraser.io/workspace/AigM8Pe26oGPgaJJAXnj
 
 # Getting Started with Create React App
 
